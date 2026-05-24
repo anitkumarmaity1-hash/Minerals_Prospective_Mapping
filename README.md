@@ -9,6 +9,7 @@ Python 3.10 PyTorch 2.1 Landsat-8 + ASTER Binary Segmentation Google Colab T4 GP
 This project presents a deep learning framework for binary mineral prospectivity mapping in the Salem District, Tamil Nadu, which hosts magnetite and hematite occurrences. Three encoder-decoder architectures (U-Net, Attention U-Net, ResUNet) are trained on multi-source Landsat-8 inputs (7 bands, PCA, geological rasters). A separate ASTER 14-band variant employs a Spectral-Spatial Transformer (SST) — a ViT-based HSI model — to capture long-range spectral and spatial correlations under extreme class imbalance (approx 2,509: 1).
 <br><br>
 01 · PROJECT OVERVIEW
+<br>
 Study Area — Salem District, Tamil Nadu — five sub-districts (Attur, Mettur, Omalur, Salem, Sankari) covering ~120×100 km at 30 m resolution. Documented magnetite, hematite and alteration mineral occurrences.
 Satellite Data — Landsat-8 L2 surface reflectance (7 bands, 30 m, 13 Feb 2023, 99.6% cloud-free). ASTER 14-band stack (B1–B9 reflectance + B10–B14 brightness temperature) for the SST variant.
 Ground Truth — Mineralisation shapefile → 90 m buffer → rasterised onto 30 m grid → uint8 binary label. Saved as .npy + .tif.
